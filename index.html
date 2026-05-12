@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dr. Rigved Nittala — Surgical Oncologist, Hyderabad</title>
+<meta name="description" content="Complex cancer needs simple solutions. Dr. Rigved Nittala, MCh Surgical Oncologist and Director of Oncology Services at Medicover Hospitals Hyderabad.">
+<meta name="theme-color" content="#1B2B4B">
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="shared.css">
+<style>
+/* HERO */
+.hero{background:var(--white);position:relative;overflow:hidden;padding:36px 20px 52px}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 100% 0%,rgba(27,43,75,.04),transparent 70%);pointer-events:none}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(var(--border-light) 1px,transparent 1px),linear-gradient(90deg,var(--border-light) 1px,transparent 1px);background-size:40px 40px;opacity:.4;pointer-events:none}
+.hero-robot{position:absolute;top:0;right:0;width:150px;pointer-events:none;z-index:1}
+.hero-robot img{width:100%;height:auto;display:block;mix-blend-mode:multiply}
+.hero-text{position:relative;z-index:2}
+.doc-strip{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.doc-strip-img{width:66px;height:66px;border-radius:50%;object-fit:cover;object-position:center top;border:2.5px solid var(--teal);box-shadow:0 4px 16px rgba(10,110,110,.2);flex-shrink:0}
+.doc-strip-name{font-family:var(--serif);font-size:15px;font-weight:700;color:var(--navy);line-height:1.2}
+.doc-strip-role{font-family:var(--mono);font-size:10px;letter-spacing:.08em;color:var(--teal);margin-top:2px}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--teal);background:var(--teal-pale);padding:6px 14px;border-radius:4px;margin-bottom:14px}
+.hero-badge::before{content:'';width:14px;height:1.5px;background:var(--teal)}
+.hero-name{font-family:var(--serif);font-size:clamp(36px,9vw,74px);font-weight:700;line-height:.95;letter-spacing:-.01em;color:var(--navy);margin-bottom:6px}
+.hero-name span{color:var(--teal);font-style:italic}
+.hero-title{font-family:var(--serif);font-size:clamp(13px,3vw,18px);font-style:italic;color:var(--muted);margin-bottom:12px}
+.hero-divider{width:48px;height:2.5px;background:var(--teal);margin-bottom:14px}
+.hero-desc{font-size:14px;line-height:1.85;color:var(--muted);font-weight:300;margin-bottom:22px;max-width:460px}
+.hero-ctas{display:flex;flex-direction:column;gap:10px;margin-bottom:24px}
+.stats-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;position:relative;z-index:2}
+
+/* PILLARS */
+.pillars{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-light) 100%);padding:40px 20px}
+.pillar{border-top:1px solid rgba(255,255,255,.12);padding:24px 0}
+.pillar:first-child{border-top:none;padding-top:0}
+.pillar-num{font-family:var(--mono);font-size:10px;letter-spacing:.18em;color:var(--teal-light);margin-bottom:8px}
+.pillar-title{font-family:var(--serif);font-size:21px;font-weight:700;color:white;margin-bottom:8px}
+.pillar-desc{font-size:13px;line-height:1.8;color:rgba(255,255,255,.68);font-weight:300}
+
+/* QUICK LINKS */
+.quick-links{padding:40px 20px;background:var(--bg-ivory)}
+.quick-links-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.ql-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:18px 16px;text-decoration:none;color:var(--text);display:flex;flex-direction:column;gap:8px;transition:all .2s;border-top:3px solid var(--teal)}
+.ql-card:active,.ql-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-2px)}
+.ql-icon{font-size:22px}
+.ql-title{font-family:var(--serif);font-size:17px;font-weight:700;color:var(--navy)}
+.ql-desc{font-size:12px;color:var(--muted);font-weight:300;line-height:1.6}
+.ql-arrow{font-size:16px;color:var(--teal);margin-top:auto;align-self:flex-end}
+
+/* TRUST STRIP */
+.trust-strip{background:var(--white);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:24px 20px}
+.trust-items{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.trust-item{display:flex;align-items:flex-start;gap:10px}
+.trust-icon{width:36px;height:36px;background:var(--teal-pale);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
+.trust-label{font-family:var(--mono);font-size:9px;letter-spacing:.1em;color:var(--sage);text-transform:uppercase;margin-bottom:2px}
+.trust-val{font-size:13px;font-weight:500;color:var(--text);line-height:1.3}
+
+/* TWITTER FEED */
+.twitter-section{padding:40px 20px;background:var(--bg)}
+.twitter-header{display:flex;align-items:center;gap:12px;margin-bottom:20px}
+.twitter-icon{width:40px;height:40px;background:#000;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.twitter-icon svg{width:22px;height:22px;fill:white}
+.twitter-title{font-family:var(--serif);font-size:20px;font-weight:700;color:var(--navy)}
+.twitter-sub{font-size:12px;color:var(--muted);font-weight:300;margin-top:2px}
+.twitter-embed-wrap{border-radius:var(--radius);overflow:hidden;border:1px solid var(--border);max-height:480px;overflow-y:auto}
+
+/* LOCATION MAP */
+.location-section{padding:40px 20px;background:var(--bg-ivory)}
+.location-header{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.location-pin{width:40px;height:40px;background:var(--teal-pale);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+.location-title{font-family:var(--serif);font-size:20px;font-weight:700;color:var(--navy)}
+.location-sub{font-size:12px;color:var(--muted);font-weight:300;margin-top:2px}
+.map-wrap{border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--border);box-shadow:var(--shadow)}
+.map-wrap iframe{width:100%;height:260px;border:0;display:block}
+.map-actions{display:flex;gap:10px;margin-top:12px}
+.map-btn{flex:1;display:flex;align-items:center;justify-content:center;gap:6px;padding:13px;background:var(--navy);color:white;border-radius:var(--radius);text-decoration:none;font-family:var(--sans);font-size:13px;font-weight:600;transition:background .2s;min-height:48px}
+.map-btn:hover{background:var(--navy-light)}
+.map-btn-ghost{background:var(--white);color:var(--navy);border:1.5px solid var(--border)}
+.map-btn-ghost:hover{border-color:var(--navy)}
+
+/* CTA BANNER */
+.cta-banner{background:linear-gradient(135deg,var(--teal) 0%,var(--coral) 100%);padding:44px 20px;text-align:center}
+.cta-banner h2{font-family:var(--serif);font-size:28px;font-weight:700;color:white;margin-bottom:10px;line-height:1.2}
+.cta-banner p{font-size:14px;color:rgba(255,255,255,.85);font-weight:300;margin-bottom:24px;line-height:1.7}
+.cta-banner-btns{display:flex;flex-direction:column;gap:10px;max-width:300px;margin:0 auto}
+
+/* SEARCH */
+.search-btn{background:var(--surface);border:1px solid var(--border);border-radius:6px;width:40px;height:40px;display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--muted);transition:all .2s;flex-shrink:0}
+.search-btn:hover{background:var(--teal-pale);border-color:var(--teal);color:var(--teal)}
+
+@media(min-width:768px){
+  .hero{padding:0;display:grid;grid-template-columns:1fr 1fr;gap:0;align-items:stretch;min-height:calc(100vh - 104px)}
+  .hero-text{padding:72px 60px 80px;display:flex;flex-direction:column;justify-content:center}
+  .hero-robot{position:static;width:100%;height:100%;display:flex;align-items:flex-end;justify-content:center;background:linear-gradient(135deg,rgba(27,43,75,.03),rgba(10,110,110,.04));border-left:1px solid var(--border-light);padding:20px 24px 0}
+  .hero-robot img{width:min(380px,90%);height:auto;mix-blend-mode:multiply}
+  .hero-ctas{flex-direction:row}
+  .stats-row{grid-template-columns:repeat(4,1fr)}
+  .pillars{padding:60px;display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+  .pillar{border-top:none;border-left:1px solid rgba(255,255,255,.12);padding:0 40px}
+  .pillar:first-child{padding-left:0;border-left:none}
+  .quick-links{padding:72px 60px}
+  .quick-links-grid{grid-template-columns:repeat(3,1fr)}
+  .trust-strip{padding:36px 60px}
+  .trust-items{grid-template-columns:repeat(4,1fr)}
+  .twitter-section{padding:60px}
+  .location-section{padding:60px}
+  .location-content{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+  .map-wrap iframe{height:340px}
+  .cta-banner{padding:80px 60px}
+  .cta-banner h2{font-size:38px}
+  .cta-banner-btns{flex-direction:row;max-width:none;justify-content:center}
+}
+</style>
+</head>
+<body>
+
+<!-- TRANSLATIONS -->
+<script>
+const TRANSLATIONS = {
+  en: {
+    badge:'Surgical Oncologist · Hyderabad',
+    heroDesc:'Complex cancer needs simple solutions. Get started on a path to health with a consultation, or explore second opinions on cancer care — informed, not rushed.',
+    bookBtn:'Book Consultation',
+    viewResearch:'View Research',
+    pillar1Title:'Commitment to Surgical Safety',
+    pillar1Desc:'Every procedure is planned with the highest standards of surgical safety — minimising risk while maximising oncological outcomes for each patient.',
+    pillar2Title:'Transparent Survival Data',
+    pillar2Desc:'Ensuring oncological soundness through transparent survival data. Evidence-based recommendations grounded in published research and peer-reviewed outcomes.',
+    pillar3Title:'Patient Quality of Life',
+    pillar3Desc:'Prioritising patient quality of life at every stage — from diagnosis through surgery and beyond. Cure and function, not just survival.',
+    floatBtn:'📞 Book Appointment Now',
+    trustHospital:'Medicover Hospitals, Financial District, Hyderabad',
+    trustDegree:'MCh Surgical Oncology',
+    trustHours:'Mon–Sat, 9am–4pm',
+    trustPhone:'+91 726 6969 555',
+  },
+  te: {
+    badge:'శస్త్రచికిత్స ఆంకాలజిస్ట్ · హైదరాబాద్',
+    heroDesc:'క్లిష్టమైన క్యాన్సర్‌కు సరళమైన పరిష్కారాలు అవసరం. సంప్రదింపు ద్వారా ఆరోగ్య మార్గంలో ప్రారంభించండి.',
+    bookBtn:'అపాయింట్‌మెంట్ బుక్ చేయండి',
+    viewResearch:'పరిశోధన చూడండి',
+    pillar1Title:'శస్త్రచికిత్స భద్రతకు నిబద్ధత',
+    pillar1Desc:'ప్రతి విధానం అత్యున్నత శస్త్రచికిత్స భద్రతా ప్రమాణాలతో ప్రణాళిక చేయబడుతుంది.',
+    pillar2Title:'పారదర్శక మనుగడ డేటా',
+    pillar2Desc:'ప్రచురించిన పరిశోధన మరియు పీర్-రివ్యూ ఫలితాలపై ఆధారపడిన సాక్ష్య-ఆధారిత సిఫార్సులు.',
+    pillar3Title:'రోగి జీవన నాణ్యత',
+    pillar3Desc:'రోగ నిర్ధారణ నుండి శస్త్రచికిత్స వరకు ప్రతి దశలో రోగి జీవన నాణ్యతకు ప్రాధాన్యత.',
+    floatBtn:'📞 ఇప్పుడు అపాయింట్‌మెంట్ బుక్ చేయండి',
+    trustHospital:'మెడికోవర్ హాస్పిటల్స్, ఫైనాన్షియల్ డిస్ట్రిక్ట్, హైదరాబాద్',
+    trustDegree:'MCh శస్త్రచికిత్స ఆంకాలజీ',
+    trustHours:'సోమ–శని, ఉదయం 9 – సాయంత్రం 4',
+    trustPhone:'+91 726 6969 555',
+  },
+  hi: {
+    badge:'सर्जिकल ऑन्कोलॉजिस्ट · हैदराबाद',
+    heroDesc:'जटिल कैंसर को सरल समाधान की जरूरत है। परामर्श से स्वास्थ्य की राह शुरू करें।',
+    bookBtn:'अपॉइंटमेंट बुक करें',
+    viewResearch:'शोध देखें',
+    pillar1Title:'सर्जिकल सुरक्षा के प्रति प्रतिबद्धता',
+    pillar1Desc:'हर प्रक्रिया सर्जिकल सुरक्षा के उच्चतम मानकों के साथ योजनाबद्ध है।',
+    pillar2Title:'पारदर्शी उत्तरजीविता डेटा',
+    pillar2Desc:'प्रकाशित शोध और सहकर्मी-समीक्षित परिणामों पर आधारित साक्ष्य-आधारित सिफारिशें।',
+    pillar3Title:'रोगी जीवन गुणवत्ता',
+    pillar3Desc:'निदान से सर्जरी तक हर चरण में रोगी के जीवन की गुणवत्ता को प्राथमिकता।',
+    floatBtn:'📞 अभी अपॉइंटमेंट बुक करें',
+    trustHospital:'मेडिकवर हॉस्पिटल्स, फाइनेंशियल डिस्ट्रिक्ट, हैदराबाद',
+    trustDegree:'MCh सर्जिकल ऑन्कोलॉजी',
+    trustHours:'सोम–शनि, सुबह 9 – शाम 4',
+    trustPhone:'+91 726 6969 555',
+  }
+};
+let currentLang = 'en';
+function setLang(lang) {
+  currentLang = lang;
+  const t = TRANSLATIONS[lang];
+  document.querySelectorAll('[data-t]').forEach(el => {
+    const key = el.dataset.t;
+    if (t[key]) el.innerHTML = t[key];
+  });
+  document.querySelectorAll('.lang-option').forEach(o => o.classList.toggle('active', o.dataset.lang === lang));
+  document.documentElement.setAttribute('lang', lang);
+  toggleLangMenu();
+}
+function toggleLangMenu() {
+  document.getElementById('langMenu').classList.toggle('open');
+}
+</script>
+
+</div>
+
+<!-- NAV -->
+<nav class="main-nav">
+  <a href="index.html" class="nav-logo">
+    <svg width="32" height="32" viewBox="0 0 64 64"><g transform="translate(32,32)"><rect x="-5" y="-28" width="10" height="22" rx="5" fill="#0A6E6E" transform="rotate(0)"/><rect x="-5" y="-28" width="10" height="22" rx="5" fill="#0A6E6E" transform="rotate(60)"/><rect x="-5" y="-28" width="10" height="22" rx="5" fill="#0A6E6E" transform="rotate(120)"/><rect x="-5" y="-28" width="10" height="22" rx="5" fill="#0A6E6E" transform="rotate(180)"/><rect x="-5" y="-28" width="10" height="22" rx="5" fill="#0A6E6E" transform="rotate(240)"/><rect x="-5" y="-28" width="10" height="22" rx="5" fill="#0A6E6E" transform="rotate(300)"/><circle r="8" fill="#1B2B4B"/><circle r="4" fill="#4A9B8E"/></g></svg>
+    <div class="nav-logo-text">Dr. Rigved Nittala<small>Surgical Oncologist</small></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="research.html">Research</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+  </ul>
+  <div class="nav-right" style="position:relative">
+    <div class="nav-status" style="display:none;align-items:center;gap:6px;font-family:var(--mono);font-size:11px;color:var(--muted)" id="navStatus"><span class="status-dot"></span>Accepting Patients</div>
+    <button class="search-btn" onclick="openSearch()" aria-label="Search">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+    </button>
+    <button class="lang-btn" onclick="toggleLangMenu()">🌐 <span id="langLabel">EN</span></button>
+    <div class="lang-menu" id="langMenu">
+      <div class="lang-option active" data-lang="en" onclick="setLang('en');document.getElementById('langLabel').textContent='EN'">🇬🇧 English</div>
+      <div class="lang-option" data-lang="te" onclick="setLang('te');document.getElementById('langLabel').textContent='TE'">🇮🇳 తెలుగు</div>
+      <div class="lang-option" data-lang="hi" onclick="setLang('hi');document.getElementById('langLabel').textContent='HI'">🇮🇳 हिंदी</div>
+    </div>
+    <a href="about.html#contact" class="nav-cta">Book Consultation</a>
+  </div>
+</nav>
+
+<!-- SEARCH OVERLAY -->
+<div class="search-overlay" id="searchOverlay" onclick="closeSearchBg(event)">
+  <div class="search-box">
+    <div class="search-input-wrap">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="text" id="searchInput" placeholder="Search pages, conditions, topics..." autocomplete="off" oninput="doSearch(this.value)" onkeydown="handleKey(event)"/>
+      <button onclick="closeSearch()" class="search-close">✕</button>
+    </div>
+    <div class="search-results" id="searchResults"></div>
+    <div class="search-empty" id="searchEmpty" style="display:none;padding:28px;text-align:center;color:var(--muted);font-size:13px">No results found. Try a different search term.</div>
+    <div class="search-hints" id="searchHints">
+      <div class="search-hint-label">Quick links</div>
+      <div class="search-hints-grid">
+        <a href="about.html" class="search-hint-chip" onclick="closeSearch()">👨‍⚕️ About</a>
+        <a href="research.html" class="search-hint-chip" onclick="closeSearch()">🔬 Research</a>
+        <a href="faq.html" class="search-hint-chip" onclick="closeSearch()">💬 FAQ</a>
+        <a href="blog.html" class="search-hint-chip" onclick="closeSearch()">📝 Blog</a>
+        <a href="gallery.html" class="search-hint-chip" onclick="closeSearch()">🖼️ Gallery</a>
+        <a href="about.html#contact" class="search-hint-chip" onclick="closeSearch()">📅 Book</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="page-wrap">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div><div class="hero-grid"></div>
+  <div class="hero-robot reveal d2">
+    <img src="mascot.png" alt="Dr. Rigved mascot"/>
+  </div>
+  <div class="hero-text">
+    <div class="doc-strip reveal">
+      <img src="doctor-photo.jpg" alt="Dr. Rigved Nittala" class="doc-strip-img"/>
+      <div>
+        <div class="doc-strip-name">Dr. Rigved Nittala</div>
+        <div class="doc-strip-role">Director of Oncology Services · Medicover Hospitals</div>
+      </div>
+    </div>
+    <div class="hero-badge reveal d1" data-t="badge">Surgical Oncologist · Hyderabad</div>
+    <h1 class="hero-name reveal d1">Dr. <span>Rigved</span><br>Nittala</h1>
+    <div class="hero-title reveal d2">MCh Surgical Oncology · Director of Oncology Services</div>
+    <div class="hero-divider reveal d2"></div>
+    <p class="hero-desc reveal d3" data-t="heroDesc">Complex cancer needs simple solutions. Get started on a path to health with a consultation, or explore second opinions on cancer care — informed, not rushed.</p>
+    <div class="hero-ctas reveal d3">
+      <a href="about.html#contact" class="btn btn-primary btn-lg" data-t="bookBtn">Book Consultation</a>
+      <a href="research.html" class="btn btn-ghost btn-lg" data-t="viewResearch">View Research</a>
+    </div>
+    <div class="stats-row reveal d3">
+      <div class="stat-card"><div class="stat-num">24</div><div class="stat-label">Publications</div></div>
+      <div class="stat-card"><div class="stat-num">15+</div><div class="stat-label">Years Exp.</div></div>
+      <div class="stat-card"><div class="stat-num">4K+</div><div class="stat-label">Research Reads</div></div>
+      <div class="stat-card"><div class="stat-num">21</div><div class="stat-label">Citations</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<div class="trust-strip">
+  <div class="trust-items reveal">
+    <div class="trust-item"><div class="trust-icon">🏥</div><div><div class="trust-label">Hospital</div><div class="trust-val" data-t="trustHospital">Medicover Hospitals, Financial District, Hyderabad</div></div></div>
+    <div class="trust-item"><div class="trust-icon">🎓</div><div><div class="trust-label">Degree</div><div class="trust-val" data-t="trustDegree">MCh Surgical Oncology</div></div></div>
+    <div class="trust-item"><div class="trust-icon">🕐</div><div><div class="trust-label">Hours</div><div class="trust-val" data-t="trustHours">Mon–Sat, 9am–4pm</div></div></div>
+    <div class="trust-item"><div class="trust-icon">📞</div><div><div class="trust-label">Phone</div><div class="trust-val"><a href="tel:+917266969555" style="color:var(--teal);text-decoration:none" data-t="trustPhone">+91 726 6969 555</a></div></div></div>
+  </div>
+</div>
+
+<!-- PILLARS -->
+<div class="pillars">
+  <div class="pillar reveal">
+    <div class="pillar-num">01</div>
+    <div class="pillar-title" data-t="pillar1Title">Commitment to Surgical Safety</div>
+    <p class="pillar-desc" data-t="pillar1Desc">Every procedure is planned with the highest standards of surgical safety — minimising risk while maximising oncological outcomes for each patient.</p>
+  </div>
+  <div class="pillar reveal d1">
+    <div class="pillar-num">02</div>
+    <div class="pillar-title" data-t="pillar2Title">Transparent Survival Data</div>
+    <p class="pillar-desc" data-t="pillar2Desc">Ensuring oncological soundness through transparent survival data. Evidence-based recommendations grounded in published research and peer-reviewed outcomes.</p>
+  </div>
+  <div class="pillar reveal d2">
+    <div class="pillar-num">03</div>
+    <div class="pillar-title" data-t="pillar3Title">Patient Quality of Life</div>
+    <p class="pillar-desc" data-t="pillar3Desc">Prioritising patient quality of life at every stage — from diagnosis through surgery and beyond. Cure and function, not just survival.</p>
+  </div>
+</div>
+
+<!-- QUICK LINKS -->
+<div class="quick-links">
+  <div class="section-label reveal">Explore</div>
+  <h2 class="section-title reveal">Everything you <em>need</em></h2>
+  <div class="quick-links-grid">
+    <a href="about.html" class="ql-card reveal"><div class="ql-icon">👨‍⚕️</div><div class="ql-title">About Me</div><div class="ql-desc">Background, credentials, and the philosophy behind the practice.</div><div class="ql-arrow">→</div></a>
+    <a href="research.html" class="ql-card reveal d1"><div class="ql-icon">🔬</div><div class="ql-title">Research</div><div class="ql-desc">24 peer-reviewed publications and ongoing oncology research.</div><div class="ql-arrow">→</div></a>
+    <a href="faq.html" class="ql-card reveal d2"><div class="ql-icon">💬</div><div class="ql-title">FAQ</div><div class="ql-desc">Common questions about colon cancer, oral cavity cancer &amp; more.</div><div class="ql-arrow">→</div></a>
+    <a href="blog.html" class="ql-card reveal"><div class="ql-icon">📝</div><div class="ql-title">Blog</div><div class="ql-desc">Articles on cancer care, treatment advances, and patient guidance.</div><div class="ql-arrow">→</div></a>
+    <a href="gallery.html" class="ql-card reveal d1"><div class="ql-icon">🖼️</div><div class="ql-title">Gallery</div><div class="ql-desc">Photos and videos from events, awareness campaigns and more.</div><div class="ql-arrow">→</div></a>
+    <a href="about.html#contact" class="ql-card reveal d2" style="border-top-color:var(--teal)"><div class="ql-icon">📅</div><div class="ql-title">Book Consultation</div><div class="ql-desc">Get in touch for a consultation or second opinion today.</div><div class="ql-arrow" style="color:var(--teal)">→</div></a>
+  </div>
+</div>
+
+<!-- TWITTER FEED -->
+<div class="twitter-section">
+  <div class="twitter-header reveal">
+    <div class="twitter-icon">
+      <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.742l7.733-8.835L2.252 2.25h6.837l4.26 5.632zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+    </div>
+    <div>
+      <div class="twitter-title">Latest from Dr. Rigved</div>
+      <div class="twitter-sub">@RigvedN on X (Twitter)</div>
+    </div>
+    <a href="https://twitter.com/RigvedN" target="_blank" class="btn btn-navy" style="margin-left:auto;font-size:12px;padding:8px 16px;min-height:36px">Follow →</a>
+  </div>
+  <div class="twitter-embed-wrap reveal d1">
+    <a class="twitter-timeline" data-lang="en" data-height="460" data-theme="light" data-chrome="noheader nofooter noborders" href="https://twitter.com/RigvedN?ref_src=twsrc%5Etfw">Tweets by RigvedN</a>
+  </div>
+</div>
+
+<!-- LOCATION MAP -->
+<div class="location-section">
+  <div class="location-content">
+    <div>
+      <div class="section-label reveal">Find Us</div>
+      <h2 class="section-title reveal">Our <em>Location</em></h2>
+      <div class="location-header reveal d1">
+        <div class="location-pin">📍</div>
+        <div>
+          <div class="location-title">Medicover Hospitals</div>
+          <div class="location-sub">Financial District, Nanakramguda, Hyderabad</div>
+        </div>
+      </div>
+      <p class="reveal d2" style="font-size:14px;color:var(--muted);font-weight:300;line-height:1.8;margin-bottom:14px">Located at Nanakramguda, Financial District — accessible from Gachibowli, HITEC City, Kondapur and Jubilee Hills.</p>
+      <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:18px" class="reveal d2">
+        <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--muted)"><span style="color:var(--teal)">🕐</span> Mon – Sat &nbsp;|&nbsp; 09:00 AM – 04:00 PM</div>
+        <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--muted)"><span style="color:var(--teal)">📞</span><a href="tel:+917266969555" style="color:var(--teal);text-decoration:none">+91 726 6969 555</a></div>
+      </div>
+      <div class="map-actions reveal d3">
+        <a href="https://www.google.com/maps/place/Medicover+Hospitals+Financial+District,+Hyderabad/@17.4128318,78.3357603,17z" target="_blank" class="map-btn">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Get Directions
+        </a>
+        <a href="tel:+917266969555" class="map-btn map-btn-ghost">📞 Call Now</a>
+      </div>
+    </div>
+    <div class="map-wrap reveal d1">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.8!2d78.3335716!3d17.4128318!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb95006badfc35%3A0x31262c5c3a812822!2sMedicover%20Hospitals%20Financial%20District%2C%20Hyderabad!5e0!3m2!1sen!2sin!4v1699000000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Medicover Hospitals Financial District Hyderabad"></iframe>
+    </div>
+  </div>
+</div>
+
+<!-- CTA BANNER -->
+<div class="cta-banner">
+  <h2 class="reveal">You don't have to navigate <em style="opacity:.85">this alone.</em></h2>
+  <p class="reveal d1">Making decisions about cancer care can feel overwhelming. Affordable, compassionate consultations and second opinions — with clarity and care.</p>
+  <div class="cta-banner-btns reveal d2">
+    <a href="tel:+917266969555" class="btn" style="background:white;color:var(--teal);font-weight:700;min-height:52px">📞 Call Now</a>
+    <a href="https://wa.me/917266969555" target="_blank" class="btn" style="background:#25D366;color:white;min-height:52px">💬 WhatsApp</a>
+    <a href="about.html#contact" class="btn" style="background:rgba(255,255,255,.15);color:white;border:1.5px solid rgba(255,255,255,.4);min-height:52px">✉️ Send a Note</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="main-footer">
+  <div class="footer-name">Dr. Rigved Nittala</div>
+  <p class="footer-tagline">MCh Surgical Oncologist · Director of Oncology Services<br>Medicover Hospitals, Financial District, Hyderabad</p>
+  <div class="footer-grid">
+    <a href="tel:+917266969555">📞 +91 726 6969 555</a>
+    <a href="mailto:drrigved@drrigved.com">✉️ drrigved@drrigved.com</a>
+    <a href="https://wa.me/917266969555" target="_blank">💬 WhatsApp</a>
+    <a href="http://www.linkedin.com/in/drrigvednittala" target="_blank">💼 LinkedIn</a>
+    <a href="https://www.researchgate.net/profile/Rigved-Nittala" target="_blank">🔬 ResearchGate</a>
+    <a href="https://twitter.com/RigvedN" target="_blank">𝕏 @RigvedN</a>
+  </div>
+  <div style="display:flex;gap:14px;flex-wrap:wrap;margin-bottom:20px">
+    <a href="index.html" style="font-family:var(--mono);font-size:11px;color:rgba(255,255,255,.35);text-decoration:none">Home</a>
+    <a href="about.html" style="font-family:var(--mono);font-size:11px;color:rgba(255,255,255,.35);text-decoration:none">About</a>
+    <a href="research.html" style="font-family:var(--mono);font-size:11px;color:rgba(255,255,255,.35);text-decoration:none">Research</a>
+    <a href="faq.html" style="font-family:var(--mono);font-size:11px;color:rgba(255,255,255,.35);text-decoration:none">FAQ</a>
+    <a href="blog.html" style="font-family:var(--mono);font-size:11px;color:rgba(255,255,255,.35);text-decoration:none">Blog</a>
+    <a href="gallery.html" style="font-family:var(--mono);font-size:11px;color:rgba(255,255,255,.35);text-decoration:none">Gallery</a>
+  </div>
+  <div class="footer-copy">© 2026 Dr. Rigved Nittala · All Rights Reserved · drrigved.com</div>
+</footer>
+</div>
+
+<!-- BOTTOM NAV -->
+<nav class="bottom-nav">
+  <a href="index.html" class="active"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9,22 9,12 15,12 15,22"/></svg>Home</a>
+  <a href="about.html"><svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>About</a>
+  <a href="research.html"><svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>Research</a>
+  <a href="faq.html"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>FAQ</a>
+  <a href="blog.html"><svg viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>Blog</a>
+  <a href="gallery.html"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg>Gallery</a>
+</nav>
+
+<!-- FLOATING STICKY CTA (mobile) -->
+<a href="about.html#contact" class="float-cta" data-t="floatBtn">
+  <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.5 10.5a19.79 19.79 0 01-3.07-8.67A2 2 0 013.44 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.91 7.91a16 16 0 006.29 6.29l.88-.88a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+  📞 Book Appointment Now
+</a>
+
+<!-- WA FLOAT -->
+<a href="https://wa.me/917266969555" class="wa-float" target="_blank" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+</a>
+
+<!-- TWITTER WIDGET SCRIPT -->
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<script>
+// TICKER
+const tickerItems=['MCh Surgical Oncology','Director of Oncology Services · Medicover Hyderabad','Commitment to Surgical Safety','Transparent Survival Data','Prioritising Patient Quality of Life','24 Peer-Reviewed Publications','Uniportal VATS Specialist','Robotic Surgery','15+ Years Experience','Complex Cancer, Simple Solutions','Second Opinion Consultations','Tata Memorial Centre Trained'];
+
+
+
+// REVEAL
+const obs=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('visible');}),{threshold:.1,rootMargin:'0px 0px -30px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+// SEARCH DATA
+const SEARCH_DATA=[
+  {title:'About Dr. Rigved',desc:'Biography, credentials, career timeline',page:'About',icon:'👨‍⚕️',url:'about.html',tags:'about biography credentials career tata memorial malabar cancer mch surgical oncology'},
+  {title:'Book a Consultation',desc:'In-person or online — affordable second opinions',page:'About',icon:'📅',url:'about.html#contact',tags:'book consultation appointment second opinion contact'},
+  {title:'Research & Publications',desc:'24 peer-reviewed publications · 4,062 reads · 21 citations',page:'Research',icon:'🔬',url:'research.html',tags:'research publications papers peer reviewed researchgate oesophageal colorectal thoracic'},
+  {title:'Colon Cancer FAQ',desc:'10 questions about colon cancer, symptoms, screening',page:'FAQ',icon:'💬',url:'faq.html',tags:'colon cancer faq colonoscopy fit test blood stool piles screening'},
+  {title:'Oral Cavity Cancer FAQ',desc:'Questions about mouth cancer, gutka, white patches',page:'FAQ',icon:'💬',url:'faq.html',tags:'oral mouth cancer faq gutka pan masala khaini tobacco leukoplakia'},
+  {title:'Blog — Cancer Care Insights',desc:'Evidence-based articles by Dr. Rigved',page:'Blog',icon:'📝',url:'blog.html',tags:'blog articles cancer care insights awareness oral colon treatment'},
+  {title:'Gallery',desc:'Photos and videos from Dr. Rigved\'s practice',page:'Gallery',icon:'🖼️',url:'gallery.html',tags:'gallery photos videos events awareness team'},
+  {title:'Uniportal VATS',desc:'Single-incision video-assisted thoracoscopic surgery',page:'About',icon:'🫁',url:'about.html',tags:'uniportal vats thoracoscopic minimally invasive thoracic lung oesophageal'},
+  {title:'Robotic Surgery',desc:'Robot-assisted precision tumour resection',page:'About',icon:'🤖',url:'about.html',tags:'robotic surgery robot assisted oncology precision tumour'},
+  {title:'Pediatric Oncology',desc:'Surgical management of childhood cancers',page:'About',icon:'🧒',url:'about.html',tags:'pediatric oncology childhood cancer surgery'},
+  {title:'Second Opinion',desc:'Independent, affordable second opinions on cancer',page:'About',icon:'💬',url:'about.html#contact',tags:'second opinion cancer diagnosis treatment plan independent'},
+  {title:'Contact',desc:'+91 726 6969 555 · drrigved@drrigved.com',page:'About',icon:'📞',url:'about.html#contact',tags:'contact phone email whatsapp call'},
+];
+let searchActive=-1;
+function openSearch(){document.getElementById('searchOverlay').classList.add('open');document.body.style.overflow='hidden';setTimeout(()=>document.getElementById('searchInput').focus(),100);}
+function closeSearch(){document.getElementById('searchOverlay').classList.remove('open');document.body.style.overflow='';document.getElementById('searchInput').value='';document.getElementById('searchResults').innerHTML='';document.getElementById('searchEmpty').style.display='none';document.getElementById('searchHints').style.display='block';searchActive=-1;}
+function closeSearchBg(e){if(e.target===document.getElementById('searchOverlay'))closeSearch();}
+function hl(text,q){if(!q)return text;return text.replace(new RegExp(`(${q.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')})`, 'gi'),'<span class="search-result-match">$1</span>');}
+function doSearch(q){
+  const query=q.trim().toLowerCase();
+  const results=document.getElementById('searchResults');
+  const empty=document.getElementById('searchEmpty');
+  const hints=document.getElementById('searchHints');
+  searchActive=-1;
+  if(!query){results.innerHTML='';empty.style.display='none';hints.style.display='block';return;}
+  hints.style.display='none';
+  const matches=SEARCH_DATA.filter(item=>item.title.toLowerCase().includes(query)||item.desc.toLowerCase().includes(query)||item.tags.toLowerCase().includes(query)).slice(0,8);
+  if(!matches.length){results.innerHTML='';empty.style.display='block';return;}
+  empty.style.display='none';
+  results.innerHTML=matches.map((m,i)=>`<a href="${m.url}" class="search-result" onclick="closeSearch()"><div class="search-result-icon">${m.icon}</div><div><div class="search-result-title">${hl(m.title,q.trim())}</div><div class="search-result-desc">${hl(m.desc,q.trim())}</div><div class="search-result-page">${m.page}</div></div></a>`).join('');
+}
+function handleKey(e){
+  const items=document.querySelectorAll('.search-result');
+  if(e.key==='Escape'){closeSearch();return;}
+  if(e.key==='ArrowDown'){e.preventDefault();searchActive=Math.min(searchActive+1,items.length-1);}
+  else if(e.key==='ArrowUp'){e.preventDefault();searchActive=Math.max(searchActive-1,-1);}
+  else if(e.key==='Enter'&&searchActive>=0){items[searchActive]?.click();return;}
+  items.forEach((el,i)=>el.classList.toggle('active-result',i===searchActive));
+}
+
+// DESKTOP STATUS
+if(window.innerWidth>=768)document.getElementById('navStatus').style.display='flex';
+
+// PWA
+if('serviceWorker' in navigator)navigator.serviceWorker.register('sw.js');
+</script>
+</body>
+</html>

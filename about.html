@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>About Dr. Rigved Nittala — Surgical Oncologist</title>
+<meta name="description" content="Dr. Rigved Nittala, MCh Surgical Oncologist and Director of Oncology Services at Medicover Hospitals Hyderabad.">
+<meta name="theme-color" content="#1B2B4B">
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="shared.css">
+<style>
+
+/* ── PAGE HERO ── */
+.about-hero{background:linear-gradient(135deg,var(--navy) 0%,#0A3A5A 100%);padding:56px 24px 80px;position:relative;overflow:hidden}
+.about-hero::after{content:'';position:absolute;bottom:-1px;left:0;right:0;height:40px;background:var(--bg);clip-path:ellipse(55% 100% at 50% 100%)}
+.about-hero::before{content:'';position:absolute;top:-60px;right:-60px;width:280px;height:280px;background:var(--teal);border-radius:50%;opacity:.07}
+.hero-label{font-family:var(--mono);font-size:11px;letter-spacing:.22em;color:rgba(255,255,255,.4);text-transform:uppercase;margin-bottom:12px}
+.hero-h1{font-family:var(--serif);font-size:clamp(36px,8vw,60px);font-weight:700;color:white;line-height:1.0;margin-bottom:10px}
+.hero-h1 em{font-style:italic;color:var(--teal-light)}
+.hero-sub{font-size:17px;color:rgba(255,255,255,.7);font-weight:300;line-height:1.7;max-width:560px}
+
+/* ── MAIN GRID ── */
+.about-section{padding:48px 24px;background:var(--bg)}
+.about-grid{display:flex;flex-direction:column;gap:32px}
+
+/* ── PROFILE CARD ── */
+.profile-card{background:var(--white);border-radius:16px;overflow:hidden;box-shadow:0 4px 24px rgba(27,43,75,.1);border:1px solid var(--border)}
+.profile-photo{position:relative;overflow:hidden}
+.profile-photo img{width:100%;height:320px;object-fit:cover;object-position:center top;display:block}
+.profile-badge{position:absolute;bottom:0;right:0;background:var(--teal);color:var(--navy);padding:10px 18px;font-family:var(--mono);font-size:11px;letter-spacing:.1em;border-radius:14px 0 0 0;font-weight:500}
+.profile-info{padding:24px}
+.profile-name{font-family:var(--serif);font-size:28px;font-weight:700;color:var(--navy);margin-bottom:5px;line-height:1.2}
+.profile-role{font-size:15px;color:var(--teal);font-weight:500;margin-bottom:14px;line-height:1.4}
+.chip-wrap{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font-family:var(--mono);font-size:11px;letter-spacing:.06em;padding:7px 14px;background:var(--teal-pale);border:1px solid var(--teal);color:var(--teal);border-radius:5px;font-weight:500}
+
+/* ── INFO CARD ── */
+.info-card{background:var(--white);border-radius:14px;overflow:hidden;border:1px solid var(--border);box-shadow:0 2px 12px rgba(27,43,75,.06);border-left:4px solid var(--teal)}
+.info-row{display:flex;gap:14px;padding:16px 18px;border-bottom:1px solid var(--border-light);align-items:flex-start}
+.info-row:last-child{border-bottom:none}
+.info-icon{width:38px;height:38px;background:var(--teal-pale);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0;margin-top:2px}
+.info-label{font-family:var(--mono);font-size:10px;letter-spacing:.14em;color:var(--sage);text-transform:uppercase;margin-bottom:4px}
+.info-value{font-size:var(--fs-body);color:var(--text);font-weight:500;line-height:1.4}
+.info-sub{font-size:var(--fs-small);color:var(--muted);margin-top:3px;font-weight:300;line-height:1.6}
+.green-badge{display:inline-flex;align-items:center;gap:6px;background:#e8f5e9;color:#2e7d32;padding:4px 10px;border-radius:4px;font-family:var(--mono);font-size:10px;margin-top:7px;font-weight:500}
+
+/* ── SECTION DIVIDER ── */
+.sec-div{display:flex;align-items:center;gap:14px;margin:36px 0 20px}
+.sec-div-line{flex:1;height:1px;background:var(--border)}
+.sec-div-label{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--teal);white-space:nowrap;font-weight:500}
+
+/* ── INTRO STATEMENT ── */
+.intro-statement{background:linear-gradient(135deg,var(--navy),#0A3A5A);border-radius:14px;padding:24px;margin-bottom:28px}
+.intro-statement p{font-family:var(--serif);font-size:19px;font-style:italic;color:var(--navy);line-height:1.7;font-weight:400}
+.intro-statement p strong{color:var(--teal-light);font-style:normal}
+
+/* ── BIO BOXES ── */
+.bio-box{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:22px;margin-bottom:18px;border-left:4px solid var(--teal)}
+.bio-box-title{font-family:var(--serif);font-size:21px;font-weight:700;color:var(--navy);margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.bio-box-title span{font-size:22px}
+.bio-box ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px}
+.bio-box li{font-size:var(--fs-body);color:var(--muted);line-height:1.75;font-weight:300;padding-left:20px;position:relative}
+.bio-box li::before{content:'→';position:absolute;left:0;color:var(--teal);font-weight:600;font-size:14px;top:2px}
+.bio-box li strong{color:var(--text);font-weight:600}
+
+/* ── CAREER MAP ── */
+.career-map-wrap{margin:28px 0;border-radius:14px;overflow:hidden;border:1px solid var(--border);box-shadow:0 4px 20px rgba(27,43,75,.1)}
+.career-map-wrap img{width:100%;display:block}
+
+/* ── EXPERIENCE ── */
+.exp-item{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:20px;margin-bottom:14px;border-left:4px solid var(--teal);transition:box-shadow .2s}
+.exp-item:hover{box-shadow:0 4px 20px rgba(27,43,75,.1)}
+.exp-item.current{border-left-color:var(--teal)}
+.exp-role{font-family:var(--serif);font-size:19px;font-weight:700;color:var(--navy);margin-bottom:4px;line-height:1.3}
+.exp-org{font-size:var(--fs-small);color:var(--teal);font-weight:600;margin-bottom:10px}
+.exp-desc ul{padding-left:18px;margin-top:8px}
+.exp-desc li{font-size:var(--fs-body);color:var(--muted);line-height:1.75;margin-bottom:6px;font-weight:300}
+.exp-desc li strong{color:var(--text);font-weight:600}
+.current-badge{display:inline-flex;align-items:center;gap:6px;background:var(--teal-pale);color:var(--teal);padding:4px 12px;border-radius:4px;font-family:var(--mono);font-size:10px;font-weight:600;letter-spacing:.08em;margin-bottom:10px}
+
+/* ── EDUCATION ── */
+.edu-item{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:18px;margin-bottom:12px;display:flex;gap:16px;align-items:flex-start}
+.edu-icon{width:44px;height:44px;background:var(--teal-pale);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+.edu-degree{font-family:var(--serif);font-size:17px;font-weight:700;color:var(--navy);margin-bottom:3px;line-height:1.3}
+.edu-school{font-size:var(--fs-small);color:var(--teal);font-weight:600;margin-bottom:3px}
+.edu-detail{font-size:var(--fs-small);color:var(--muted);font-weight:300;margin-top:4px;line-height:1.6}
+
+/* ── SKILLS ── */
+.skills-grid{display:flex;flex-wrap:wrap;gap:10px}
+.skill{font-family:var(--mono);font-size:11px;letter-spacing:.07em;padding:8px 14px;border:1px solid var(--border);color:var(--text);background:var(--white);border-radius:6px;transition:all .2s;font-weight:400}
+.skill:hover{border-color:var(--teal);color:var(--teal);background:var(--teal-pale)}
+.skill.highlight{background:var(--teal-pale);border-color:var(--teal);color:var(--teal);font-weight:500}
+
+/* ── SOCIAL ── */
+.social-links{display:flex;flex-direction:column;gap:10px}
+.social-link{display:flex;align-items:center;gap:16px;padding:14px 18px;border:1px solid var(--border);border-radius:12px;text-decoration:none;color:var(--text);transition:all .2s;background:var(--white)}
+.social-link:hover{border-color:var(--navy);background:var(--bg-ivory);transform:translateX(3px)}
+.social-icon{width:38px;height:38px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:19px}
+.social-label{font-family:var(--mono);font-size:10px;letter-spacing:.14em;color:var(--sage);text-transform:uppercase;margin-bottom:2px}
+.social-val{font-size:var(--fs-body);font-weight:500;color:var(--text)}
+.social-arrow{margin-left:auto;color:var(--teal);font-size:18px}
+.linkedin-card{background:linear-gradient(135deg,#0077B5,#005885);border-radius:12px;padding:18px 22px;display:flex;align-items:center;gap:16px;text-decoration:none;margin-bottom:10px}
+.linkedin-logo{width:46px;height:46px;background:white;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.linkedin-logo svg{width:28px;height:28px}
+.linkedin-name{font-family:var(--serif);font-size:18px;font-weight:700;color:var(--navy);margin-bottom:2px}
+.linkedin-role{font-size:13px;color:rgba(255,255,255,.75);font-weight:300}
+.linkedin-arrow{color:rgba(255,255,255,.7);font-size:20px;margin-left:auto}
+
+/* ── CONTACT ── */
+.contact-section{background:linear-gradient(135deg,var(--navy) 0%,#0A3A5A 100%);padding:48px 24px}
+.contact-grid{display:flex;flex-direction:column;gap:32px}
+.contact-title{font-family:var(--serif);font-size:clamp(28px,6vw,44px);font-weight:700;color:white;line-height:1.1;margin-bottom:12px}
+.contact-title em{font-style:italic;color:var(--teal-light)}
+.contact-desc{font-size:var(--fs-body);color:rgba(255,255,255,.7);font-weight:300;line-height:1.8;margin-bottom:22px}
+.c-link{display:flex;align-items:center;gap:16px;padding:15px 18px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:12px;text-decoration:none;color:white;transition:all .2s;margin-bottom:10px;min-height:54px}
+.c-link:hover{background:rgba(255,255,255,.16);transform:translateX(3px)}
+.c-link-icon{font-size:19px;width:28px;text-align:center;flex-shrink:0}
+.c-link-label{font-family:var(--mono);font-size:10px;letter-spacing:.14em;color:rgba(255,255,255,.45);text-transform:uppercase;margin-bottom:2px}
+.c-link-val{font-size:var(--fs-body);font-weight:500}
+.cform{background:white;border-radius:16px;padding:28px}
+.cform-title{font-family:var(--serif);font-size:24px;font-weight:700;color:var(--navy);margin-bottom:4px}
+.cform-sub{font-size:var(--fs-small);color:var(--muted);font-weight:300;margin-bottom:22px}
+.fg{margin-bottom:16px}
+.fg label{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:7px}
+.fg input,.fg textarea,.fg select{width:100%;border:1.5px solid var(--border);border-radius:8px;padding:13px 16px;font-family:var(--sans);font-size:var(--fs-body);color:var(--text);background:var(--bg);outline:none;transition:border-color .2s;-webkit-appearance:none;min-height:50px}
+.fg input:focus,.fg textarea:focus,.fg select:focus{border-color:var(--teal);box-shadow:0 0 0 3px rgba(10,110,110,.1)}
+.fg textarea{resize:vertical;min-height:94px}
+.fg-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+
+@media(min-width:768px){
+  .about-hero{padding:80px 60px 100px}
+  .about-section{padding:64px 60px}
+  .about-grid{display:grid;grid-template-columns:340px 1fr;gap:40px;align-items:start}
+  .contact-section{padding:72px 60px}
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:start}
+}
+</style>
+</head>
+<body>
+</div>
+<nav class="main-nav">
+  <a href="index.html" class="nav-logo"><svg width="32" height="32" viewBox="0 0 64 64"><g transform="translate(32,32)"><rect x="-5" y="-28" width="10" height="22" rx="5" fill="#0A6E6E" transform="rotate(0)"/><rect x="-5" y="-28" width="10" height="22" rx="5" fill="#0A6E6E" transform="rotate(60)"/><rect x="-5" y="-28" width="10" height="22" rx="5" fill="#0A6E6E" transform="rotate(120)"/><rect x="-5" y="-28" width="10" height="22" rx="5" fill="#0A6E6E" transform="rotate(180)"/><rect x="-5" y="-28" width="10" height="22" rx="5" fill="#0A6E6E" transform="rotate(240)"/><rect x="-5" y="-28" width="10" height="22" rx="5" fill="#0A6E6E" transform="rotate(300)"/><circle r="8" fill="#1B2B4B"/><circle r="4" fill="#4A9B8E"/></g></svg><div class="nav-logo-text">Dr. Rigved Nittala<small>Surgical Oncologist</small></div></a>
+  <ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="about.html" class="active">About</a></li><li><a href="research.html">Research</a></li><li><a href="faq.html">FAQ</a></li><li><a href="blog.html">Blog</a></li><li><a href="gallery.html">Gallery</a></li></ul>
+  <div class="nav-right" style="position:relative">
+    <button class="lang-btn" onclick="toggleLangMenu()">🌐 <span id="langLabel">EN</span></button>
+    <div class="lang-menu" id="langMenu">
+      <div class="lang-option active" data-lang="en" onclick="setLang('en');document.getElementById('langLabel').textContent='EN'">🇬🇧 English</div>
+      <div class="lang-option" data-lang="te" onclick="setLang('te');document.getElementById('langLabel').textContent='TE'">🇮🇳 తెలుగు</div>
+      <div class="lang-option" data-lang="hi" onclick="setLang('hi');document.getElementById('langLabel').textContent='HI'">🇮🇳 हिंदी</div>
+    </div>
+    <a href="#contact" class="nav-cta">Book Consultation</a>
+  </div>
+</nav>
+
+<div class="page-wrap">
+
+<!-- HERO -->
+<div class="about-hero">
+  <div class="hero-label reveal">02 — About</div>
+  <h1 class="hero-h1 reveal d1">The doctor<br>behind the <em>practice</em></h1>
+  <p class="hero-sub reveal d2" data-t="heroSub">Treatment decisions in cancer care must be informed and not rushed, and one should explore effective oncology solutions for optimal cancer treatment.</p>
+</div>
+
+<!-- MAIN SECTION -->
+<div class="about-section">
+  <div class="about-grid">
+
+    <!-- LEFT SIDEBAR -->
+    <div>
+      <!-- PROFILE CARD -->
+      <div class="profile-card reveal">
+        <div class="profile-photo">
+          <img src="doctor-photo.jpg" alt="Dr. Rigved Nittala"/>
+          <div class="profile-badge">MCh · Surgical Oncology</div>
+        </div>
+        <div class="profile-info">
+          <div class="profile-name">Dr. Rigved Nittala</div>
+          <div class="profile-role">Director of Oncology Services · Medicover Hospitals</div>
+          <div class="chip-wrap">
+            <span class="chip">MCh Surgical Oncology</span>
+            <span class="chip">Uniportal VATS</span>
+            <span class="chip">Minimally Invasive Surgery</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- INFO CARD -->
+      <div class="info-card reveal d1">
+        <div class="info-row"><div class="info-icon">🏥</div><div><div class="info-label">Currently</div><div class="info-value">Director of Oncology Services</div><div class="info-sub">Medicover Hospitals, Financial District, Hyderabad</div></div></div>
+        <div class="info-row"><div class="info-icon">🎓</div><div><div class="info-label">Highest Qualification</div><div class="info-value">MCh Surgical Oncology</div><div class="info-sub">Tata Memorial Centre, Mumbai</div></div></div>
+        <div class="info-row"><div class="info-icon">⏱️</div><div><div class="info-label">Experience</div><div class="info-value">15+ Years Surgical Experience</div><div class="info-sub">Tata Memorial Centre &amp; Malabar Cancer Centre trained</div></div></div>
+        <div class="info-row"><div class="info-icon">🕐</div><div><div class="info-label">Clinic Hours</div><div class="info-value">Monday – Saturday, 9 AM – 4 PM</div><div class="green-badge"><span class="status-dot"></span>Accepting Patients</div></div></div>
+        <div class="info-row"><div class="info-icon">📞</div><div><div class="info-label">Phone</div><div class="info-value"><a href="tel:+917266969555" style="color:var(--teal);text-decoration:none">+91 726 6969 555</a></div></div></div>
+        <div class="info-row"><div class="info-icon">✉️</div><div><div class="info-label">Email</div><div class="info-value"><a href="mailto:drrigved@drrigved.com" style="color:var(--teal);text-decoration:none">drrigved@drrigved.com</a></div></div></div>
+      </div>
+
+      <!-- CONNECT -->
+      <div class="sec-div reveal"><div class="sec-div-line"></div><div class="sec-div-label">Connect</div><div class="sec-div-line"></div></div>
+      <a href="https://www.linkedin.com/in/drrigvednittala/" target="_blank" class="linkedin-card reveal">
+        <div class="linkedin-logo"><svg viewBox="0 0 24 24" fill="#0077B5"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></div>
+        <div><div class="linkedin-name">Rigved N</div><div class="linkedin-role">linkedin.com/in/drrigvednittala</div></div>
+        <div class="linkedin-arrow">→</div>
+      </a>
+      <div class="social-links reveal d1">
+        <a href="https://www.researchgate.net/profile/Rigved-Nittala" target="_blank" class="social-link"><div class="social-icon" style="background:#00CCBB22">🔬</div><div><div class="social-label">ResearchGate</div><div class="social-val">24 Publications · 21 Citations</div></div><div class="social-arrow">→</div></a>
+        <a href="https://twitter.com/RigvedN" target="_blank" class="social-link"><div class="social-icon" style="background:#00000011">𝕏</div><div><div class="social-label">Twitter / X</div><div class="social-val">@RigvedN</div></div><div class="social-arrow">→</div></a>
+      </div>
+    </div>
+
+    <!-- RIGHT CONTENT -->
+    <div>
+
+      <!-- INTRO STATEMENT -->
+      <div class="intro-statement reveal">
+        <p>Surgical oncology where evidence meets compassion — <strong>complex cancer needs simple solutions.</strong></p>
+      </div>
+
+      <!-- IN A NUTSHELL -->
+      <div class="sec-div reveal"><div class="sec-div-line"></div><div class="sec-div-label">In a Nutshell</div><div class="sec-div-line"></div></div>
+      <div class="bio-box reveal d1">
+        <div class="bio-box-title"><span>🩺</span> Who I Am</div>
+        <ul>
+          <li>I am a surgical oncologist with over a decade of experience managing <strong>complex cancers of the gastrointestinal tract, breast, thorax, and head and neck.</strong></li>
+          <li>My training at <strong>Tata Memorial Centre, Mumbai</strong> — India's premier cancer institution — &amp; <strong>Malabar Cancer Centre, Thalassery</strong>, shaped a practice philosophy rooted in evidence-based oncosurgery, multidisciplinary decision-making, and compassionate patient communication.</li>
+        </ul>
+      </div>
+
+      <!-- BEEN THERE DONE THAT -->
+      <div class="sec-div reveal"><div class="sec-div-line"></div><div class="sec-div-label">Been There, Done That</div><div class="sec-div-line"></div></div>
+      <div class="bio-box reveal d1" style="border-left-color:var(--teal)">
+        <div class="bio-box-title"><span>🏗️</span> Beyond the OT</div>
+        <ul>
+          <li>Beyond the operating theatre, I have <strong>built surgical oncology units from the ground up</strong> — including establishing specialty services at HBCHRC Visakhapatnam.</li>
+          <li>I am deeply invested in <strong>cancer care systems, clinician education, and public health communication.</strong></li>
+          <li>I actively contribute to research and have <strong>21+ peer-reviewed publications</strong>, with ongoing work in cancer diagnosis communication practices across Indian healthcare settings.</li>
+        </ul>
+      </div>
+
+      <!-- CAREER MAP -->
+      <div class="sec-div reveal"><div class="sec-div-line"></div><div class="sec-div-label">My Journey</div><div class="sec-div-line"></div></div>
+      <div class="career-map-wrap reveal d1">
+        <img src="career-map.png" alt="Dr. Rigved Nittala — Journey Across Leading Cancer Centres Across India"/>
+      </div>
+
+      <!-- EXPERIENCE -->
+      <div class="sec-div reveal"><div class="sec-div-line"></div><div class="sec-div-label">Experience</div><div class="sec-div-line"></div></div>
+
+      <div class="exp-item current reveal">
+        <div class="current-badge"><span class="status-dot"></span> Current</div>
+        <div class="exp-role">Director of Oncology Services</div>
+        <div class="exp-org">Medicover Hospitals · Hyderabad · Full-time</div>
+      </div>
+
+      <div class="exp-item reveal d1">
+        <div class="exp-role">Associate Professor &amp; Incharge — Surgical Oncology</div>
+        <div class="exp-org">Homi Bhabha Cancer Hospital &amp; Research Centre · Visakhapatnam · Full-time</div>
+        <div class="exp-desc">
+          <ul>
+            <li>Led a surgical oncology unit with <strong>1,500+ surgeries annually</strong></li>
+            <li>Performed 20+ major complex oncological resections annually including oesophagectomies, gastrectomies, Whipple procedures &amp; pediatric cancers</li>
+            <li>Established Breast Oncology, Thoracic Oncology, GI Oncology, Pediatric Oncology &amp; Uro Oncology divisions</li>
+            <li>Mentored MCh and MS surgical residents; contributed to 20+ peer-reviewed publications</li>
+            <li>Chaired weekly multidisciplinary tumour board discussions</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- EDUCATION -->
+      <div class="sec-div reveal"><div class="sec-div-line"></div><div class="sec-div-label">Education</div><div class="sec-div-line"></div></div>
+      <div class="edu-item reveal">
+        <div class="edu-icon">🎓</div>
+        <div><div class="edu-degree">MCh — Surgical Oncology</div><div class="edu-school">Tata Memorial Centre, Mumbai</div></div>
+      </div>
+      <div class="edu-item reveal d1">
+        <div class="edu-icon">🏫</div>
+        <div><div class="edu-degree">Fellow Surgical Oncology</div><div class="edu-school">Malabar Cancer Centre</div><div class="edu-detail">Head &amp; Neck · Breast &amp; Gynaec · GI &amp; Thoracic Oncology · Bone &amp; Soft Tissue Tumours</div></div>
+      </div>
+      <div class="edu-item reveal d2">
+        <div class="edu-icon">🏛️</div>
+        <div><div class="edu-degree">MS — General Surgery Residency</div><div class="edu-school">Government Medical College, Kozhikode, Kerala</div></div>
+      </div>
+      <div class="edu-item reveal">
+        <div class="edu-icon">📚</div>
+        <div><div class="edu-degree">MBBS</div><div class="edu-school">The Maharaja Sayajirao University of Baroda</div></div>
+      </div>
+
+      <!-- SKILLS -->
+      <div class="sec-div reveal"><div class="sec-div-line"></div><div class="sec-div-label">Skills &amp; Expertise</div><div class="sec-div-line"></div></div>
+      <div class="skills-grid reveal">
+        <span class="skill highlight">Surgical Oncology</span>
+        <span class="skill highlight">Uniportal VATS &amp; MIS</span>
+        <span class="skill highlight">GI-HPB Cancer Surgery</span>
+        <span class="skill highlight">Thoracic Surgery</span>
+        <span class="skill highlight">Minimally Invasive Surgery</span>
+        <span class="skill highlight">Pediatric Oncology</span>
+        <span class="skill">Colorectal Surgery</span>
+        <span class="skill">Head &amp; Neck Surgery</span>
+        <span class="skill">Breast &amp; Thyroid Surgery</span>
+        <span class="skill">Gynecologic Oncology</span>
+        <span class="skill">Soft Tissue Sarcoma</span>
+        <span class="skill">Mastectomy</span>
+        <span class="skill">Multidisciplinary Oncology</span>
+        <span class="skill">Tumor Board</span>
+        <span class="skill">Oncology Protocols</span>
+        <span class="skill">Cancer Care Systems</span>
+        <span class="skill">Peer-Reviewed Publications</span>
+        <span class="skill">Patient Advocacy</span>
+        <span class="skill">Public Health Education</span>
+        <span class="skill">Medical Ethics</span>
+        <span class="skill">Patient Communication</span>
+        <span class="skill">Research &amp; Academic</span>
+        <span class="skill">Leadership &amp; Systems</span>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<div class="contact-section" id="contact">
+  <div class="contact-grid">
+    <div>
+      <div class="hero-label reveal" style="color:rgba(255,255,255,.4)">Contact</div>
+      <h2 class="contact-title reveal">Let's navigate<br><em>this together</em></h2>
+      <p class="contact-desc reveal d1">Reach out for an affordable, compassionate consultation or second opinion.</p>
+      <div class="reveal d2">
+        <a href="tel:+917266969555" class="c-link"><div class="c-link-icon">📞</div><div><div class="c-link-label">Phone</div><div class="c-link-val">+91 726 6969 555</div></div></a>
+        <a href="mailto:drrigved@drrigved.com" class="c-link"><div class="c-link-icon">✉️</div><div><div class="c-link-label">Email</div><div class="c-link-val">drrigved@drrigved.com</div></div></a>
+        <a href="https://maps.google.com/?q=Medicover+Hospitals+Financial+District+Hyderabad" target="_blank" class="c-link"><div class="c-link-icon">📍</div><div><div class="c-link-label">Hospital</div><div class="c-link-val">Medicover Hospitals, Financial District, Hyderabad</div></div></a>
+        <a href="https://www.linkedin.com/in/drrigvednittala/" target="_blank" class="c-link"><div class="c-link-icon">💼</div><div><div class="c-link-label">LinkedIn</div><div class="c-link-val">linkedin.com/in/drrigvednittala</div></div></a>
+        <a href="https://twitter.com/RigvedN" target="_blank" class="c-link"><div class="c-link-icon">𝕏</div><div><div class="c-link-label">Twitter / X</div><div class="c-link-val">@RigvedN</div></div></a>
+      </div>
+    </div>
+    <div class="cform reveal d1">
+      <h3 class="cform-title">Send a Note</h3>
+      <p class="cform-sub">We will get back within 24 hours.</p>
+      <div class="fg-row">
+        <div class="fg"><label>Name</label><input type="text" id="cname" placeholder="Your full name"></div>
+        <div class="fg"><label>Phone</label><input type="tel" id="cphone" placeholder="+91 XXXXX XXXXX"></div>
+      </div>
+      <div class="fg"><label>Email</label><input type="email" id="cemail" placeholder="your@email.com"></div>
+      <div class="fg"><label>Consultation Type</label>
+        <select id="ctype">
+          <option value="">Select...</option>
+          <option>First Consultation</option>
+          <option>Second Opinion on Diagnosis</option>
+          <option>Second Opinion on Treatment</option>
+          <option>Post-Surgery Follow-Up</option>
+          <option>Referring Physician Enquiry</option>
+          <option>Research / Academic Enquiry</option>
+        </select>
+      </div>
+      <div class="fg"><label>Message</label><textarea id="cmsg" placeholder="Briefly describe your situation..."></textarea></div>
+      <a href="https://wa.me/917266969555" target="_blank" class="btn btn-full" style="background:#25D366;color:white;margin-bottom:12px;min-height:52px;font-size:15px">💬 Message on WhatsApp</a>
+      <button class="btn btn-primary btn-full" style="min-height:52px;font-size:15px" onclick="sendContact()">Send Message</button>
+      <div id="contactMsg" style="display:none;margin-top:12px;padding:10px 14px;border-radius:8px;font-size:14px"></div>
+    </div>
+  </div>
+</div>
+
+<footer class="main-footer">
+  <div class="footer-name">Dr. Rigved Nittala</div>
+  <p class="footer-tagline">MCh Surgical Oncologist · Director of Oncology Services<br>Medicover Hospitals, Financial District, Hyderabad</p>
+  <div class="footer-grid">
+    <a href="tel:+917266969555">📞 +91 726 6969 555</a><a href="mailto:drrigved@drrigved.com">✉️ drrigved@drrigved.com</a>
+    <a href="https://wa.me/917266969555" target="_blank">💬 WhatsApp</a><a href="https://www.linkedin.com/in/drrigvednittala/" target="_blank">💼 LinkedIn</a>
+    <a href="https://www.researchgate.net/profile/Rigved-Nittala" target="_blank">🔬 ResearchGate</a><a href="#contact">📅 Book Appointment</a>
+  </div>
+  <div class="footer-copy">© 2026 Dr. Rigved Nittala · All Rights Reserved</div>
+</footer>
+</div>
+
+<nav class="bottom-nav">
+  <a href="index.html"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9,22 9,12 15,12 15,22"/></svg>Home</a>
+  <a href="about.html" class="active"><svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>About</a>
+  <a href="research.html"><svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>Research</a>
+  <a href="faq.html"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>FAQ</a>
+  <a href="blog.html"><svg viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>Blog</a>
+  <a href="gallery.html"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg>Gallery</a>
+</nav>
+<a href="https://wa.me/917266969555" class="wa-float" target="_blank"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></a>
+<script>
+function sendContact() {
+  var name = document.getElementById('cname').value.trim();
+  var phone = document.getElementById('cphone').value.trim();
+  var email = document.getElementById('cemail').value.trim();
+  var type = document.getElementById('ctype').value;
+  var msg = document.getElementById('cmsg').value.trim();
+  var statusEl = document.getElementById('contactMsg');
+  if (!name || !email || !msg) { statusEl.style.display='block'; statusEl.style.background='#fdecea'; statusEl.style.color='#c62828'; statusEl.textContent='Please fill in name, email and message.'; return; }
+  var sub = encodeURIComponent('Consultation Request — ' + (type || 'General') + ' — ' + name);
+  var body = encodeURIComponent('Name: ' + name + '\nPhone: ' + (phone || 'Not provided') + '\nEmail: ' + email + '\nType: ' + (type || 'General') + '\n\nMessage:\n' + msg);
+  window.location.href = 'mailto:drrigved@drrigved.com?subject=' + sub + '&body=' + body;
+  statusEl.style.display='block'; statusEl.style.background='#e8f5e9'; statusEl.style.color='#2e7d32'; statusEl.textContent='Opening your email app to send the message.';
+}
+const obs = new IntersectionObserver(e => e.forEach(x => { if(x.isIntersecting) x.target.classList.add('visible'); }), {threshold:.1, rootMargin:'0px 0px -30px 0px'});
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+function toggleLangMenu() { document.getElementById('langMenu').classList.toggle('open'); }
+const ABOUT_TRANSLATIONS = {
+  en: { heroSub: 'Treatment decisions in cancer care must be informed and not rushed, and one should explore effective oncology solutions for optimal cancer treatment.' },
+  te: { heroSub: 'క్యాన్సర్ చికిత్సలో నిర్ణయాలు సమాచారంతో మరియు తొందరపాటు లేకుండా తీసుకోవాలి, మరియు సరైన క్యాన్సర్ చికిత్స కోసం ప్రభావాన్ని అన్వేషించాలి.' },
+  hi: { heroSub: 'कैंसर देखभाल में उपचार के निर्णय सूचित होने चाहिए और जल्दबाजी में नहीं, और इष्टतम उपचार के लिए प्रभावी ऑन्कोलॉजी समाधान खोजने चाहिए।' }
+};
+function setLang(lang) {
+  const t = ABOUT_TRANSLATIONS[lang];
+  document.querySelectorAll('[data-t]').forEach(el => { if(t[el.dataset.t]) el.innerHTML = t[el.dataset.t]; });
+  document.querySelectorAll('.lang-option').forEach(o => o.classList.toggle('active', o.dataset.lang === lang));
+  document.getElementById('langMenu').classList.remove('open');
+}
+if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js');
+</script>
+</body>
+</html>
